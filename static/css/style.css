@@ -1,0 +1,175 @@
+.tipo {
+    width: 5%;
+    /* o cualquier otra anchura deseada */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+
+.tipo .h2 {
+    width: 50%;
+    /* o cualquier otra anchura deseada */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tipos{
+    width: 15%;
+    /* o cualquier otra anchura deseada */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+.carousel-inner img {
+    width: 50%; 
+    height: 400px;
+    display: block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes animacion_producto_desktop {
+    0% {
+        transform: rotate(-20deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+
+.productos .producto {
+    width: 25%;
+    margin-top: 15px;
+    animation: animacion_producto_desktop 0.5s;
+}
+
+.productos .producto img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.productos .producto .contenedor_producto {
+    background-color: white;
+    width: 80%;
+    margin:auto;
+}
+
+.productos .producto .detalles {
+    padding: 5px;
+}
+
+@media(max-width:1024px) {
+
+    .galeria {
+        grid-template-columns:1fr 1fr;
+    }
+
+    @keyframes animacion_producto_tablet {
+
+        0% {
+            opacity: 0;/*0-1*/
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+    }
+
+    .productos .producto {
+        width: 50%;
+        animation: animacion_producto_tablet 2s;
+    }
+
+}
+
+/*SMARTPHONE*/
+@media(max-width:480px) {
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    @keyframes animacion_producto_smartphone {
+
+        0% {
+            transform: scale(0.1);/*0 - 1*/
+        }
+
+        80%{
+            transform: scale(1.05);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+    .productos .producto {
+        width: 100%;
+        animation: animacion_producto_smartphone 0.8s;
+    }
+
+    header {
+        flex-direction: column;
+        height: 60px;
+        transition: all 0.8s;
+        /*position: fixed;
+        left:0;
+        top:0;*/
+        overflow: hidden;
+    }
+
+    #contenido {
+        margin-top: 60px;
+    }
+
+    header > div {
+        width: 100%;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .contenedor_logo {
+        justify-content: center;
+    }
+
+    .logo {
+        margin-top: 15px;
+    }
+
+    nav > ul {
+        margin-right: 0;
+    }
+
+    nav > ul > li {
+        display: block;
+        margin:0;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+}
